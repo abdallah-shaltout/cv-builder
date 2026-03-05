@@ -1,0 +1,165 @@
+{
+    "header": {
+        "name": "Abdallah Shaltout",
+        "headline": "Senior Full-Stack Developer · MEVN Stack · 5+ Years Experience",
+        "contact": [
+            {
+                "icon": "phone",
+                "text": "+20 155 467 3489",
+                "href": "tel:+201554673489"
+            },
+            { "icon": "location", "text": "Cairo, Egypt", "href": null },
+            {
+                "icon": "mail",
+                "text": "shaltoutdev.com",
+                "href": "https://shaltoutdev.com"
+            },
+            {
+                "icon": "linkedin",
+                "text": "linkedin.com/in/abdallah-shaltout",
+                "href": "https://linkedin.com/in/abdallah-shaltout"
+            },
+            {
+                "icon": "github",
+                "text": "github.com/abdallah-shaltout",
+                "href": "https://github.com/abdallah-shaltout"
+            }
+        ]
+    },
+    "summary": "Senior Full-Stack Developer with <strong>5+ years of experience</strong> architecting and delivering enterprise-grade web applications for the MENA market. Specialized in the <strong>MEVN stack</strong> (MongoDB, Express.js, Vue.js/Nuxt.js, Node.js) with deep expertise in <strong>multi-tenant SaaS architecture</strong>, payment gateway integrations, and ZATCA-compliant e-invoicing systems. Built and scaled production platforms serving <strong>5,000+ active merchants</strong> and <strong>2,000+ businesses</strong> across Egypt and Saudi Arabia. Experienced in leading development teams, establishing engineering standards, and owning projects from architecture through deployment. Proficient in Arabic RTL interfaces and culturally appropriate design for Middle Eastern markets.",
+    "skills": [
+        {
+            "category": "Frontend",
+            "items": "Vue.js 3, Nuxt.js 3/4, TypeScript, Pinia, TailwindCSS, PrimeVue, Three.js, Vite, Webpack"
+        },
+        {
+            "category": "Backend",
+            "items": "Node.js, Express.js, TypeScript, REST API Design, BullMQ, Socket.IO, JWT, OAuth 2.0"
+        },
+        {
+            "category": "Databases",
+            "items": "MongoDB, Mongoose, Redis, MySQL, PostgreSQL, Elasticsearch"
+        },
+        {
+            "category": "DevOps & Cloud",
+            "items": "Docker, Coolify, Traefik, AWS S3, Cloudinary, Firebase, CI/CD, GitHub Actions, Linux (Ubuntu)"
+        },
+        {
+            "category": "Payments & APIs",
+            "items": "MyFatoorah, Tabby, Tamara, STC Pay, Stripe, Mada, ZATCA e-Invoicing, WhatsApp Business API, Twilio, FCM/APNS"
+        },
+        {
+            "category": "Architecture",
+            "items": "Multi-tenant SaaS, Microservices, Event-Driven Architecture, CQRS, Offline-First, Dynamic Subdomain Routing"
+        },
+        {
+            "category": "Languages",
+            "items": "JavaScript (ES2022+), TypeScript, Python, SQL, Bash"
+        },
+        {
+            "category": "Tools & Methods",
+            "items": "Git, Postman, Jest, Bun, pnpm, ESLint, Prettier, Agile/Scrum, Code Review, Technical Mentorship"
+        }
+    ],
+    "jobs": [
+        {
+            "title": "Senior Full-Stack Developer",
+            "period": "May 2024 — Present",
+            "meta": "Zakham Company · Digital Marketing & Development · Cairo, Egypt / Saudi Arabia · <a href=\"https://zakham-sa.com\" target=\"_blank\">zakham-sa.com</a>",
+            "bullets": [
+                "Lead engineer on <strong>tadberat.com</strong>, a production multi-vendor marketplace currently serving <strong>5,000+ active stores</strong> with hundreds of millions SAR in annual transaction volume.",
+                "Designed and implemented a <strong>multi-tenant SaaS architecture</strong> with complete tenant isolation, dynamic wildcard subdomain routing via Traefik, and per-merchant custom domain SSL provisioning.",
+                "Built a <strong>ZATCA Phase 2–compliant</strong> e-invoicing engine with automated XML generation, digital signing, and QR code stamping to meet Saudi tax authority requirements.",
+                "Integrated <strong>5 payment gateways</strong> (MyFatoorah, Tabby, Tamara, STC Pay, Mada) into a unified checkout layer with webhook handling, refund processing, and financial reconciliation.",
+                "Engineered Redis caching strategies and MongoDB aggregation pipeline optimizations that achieved a <strong>60% reduction in API response times</strong> under high-concurrency conditions.",
+                "Architected Docker-based deployment pipelines on Coolify with zero-downtime deployments, centralized log management, and automated health monitoring.",
+                "Led and mentored a team of <strong>5 developers</strong>; established TypeScript-first conventions, structured code review processes, and sprint planning workflows that improved delivery velocity."
+            ]
+        },
+        {
+            "title": "Full-Stack Developer",
+            "period": "Apr 2020 — Jul 2024",
+            "meta": "GCSDC · 4 Years 3 Months",
+            "bullets": [
+                "Core developer of <strong>farook.app</strong>, a cloud-based POS and accounting platform serving <strong>2,000+ businesses</strong> across Saudi Arabia, maintaining a 99.9% uptime SLA.",
+                "Architected an <strong>offline-first POS system</strong> with background sync, conflict resolution, and real-time inventory tracking across multiple branches and locations.",
+                "Built a <strong>BullMQ-based distributed job queue</strong> for scheduled billing, automated financial report generation, and high-throughput background processing.",
+                "Developed a multi-channel notification engine integrating <strong>Firebase FCM/APNS, WhatsApp Business API, and Twilio SMS</strong> for both transactional and marketing communications.",
+                "Delivered <strong>ZATCA-compliant invoicing</strong> for the Saudi market, including VAT automation and certified digital invoice formats.",
+                "Optimized MongoDB schemas, compound indexes, and aggregation queries, reducing average execution time by <strong>45% on core reporting modules</strong>."
+            ]
+        },
+        {
+            "title": "Freelance Full-Stack Developer",
+            "period": "2020 — 2024",
+            "meta": "Remote · Clients across Egypt, Saudi Arabia, and UAE",
+            "bullets": [
+                "Delivered 10+ end-to-end projects including e-commerce stores, SaaS dashboards, corporate websites, and custom business tools for regional clients.",
+                "Managed the complete project lifecycle independently: discovery, architecture, development, Docker deployment, and client handover.",
+                "Notable deliveries include <strong>newmetalsteel.com</strong>, <strong>ps-adv.com</strong>, sysattaf.shop, and multiple private production systems.",
+                "Maintained <strong>94 repositories</strong> (23 public, 71 private) spanning production applications, internal tools, and reusable component libraries."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "farook.app",
+            "link": "https://farook.app",
+            "subtitle": "Cloud POS & Accounting System",
+            "stack": "Nuxt 3 · Express · MongoDB · Redis · BullMQ · Socket.IO",
+            "description": "Full-featured cloud POS with offline-first architecture, real-time inventory management, multi-branch support, automated billing, ZATCA e-invoicing, and comprehensive financial reporting.",
+            "badges": [
+                "2,000+ Businesses",
+                "Offline-First Architecture",
+                "99.9% Uptime",
+                "Saudi Arabia"
+            ]
+        },
+        {
+            "name": "tadberat.com",
+            "link": "https://tadberat.com",
+            "subtitle": "Multi-Vendor Marketplace Platform",
+            "stack": "Nuxt 4 · Express · MongoDB · Redis · Docker · Traefik",
+            "description": "Enterprise multi-tenant marketplace with per-merchant storefronts, ZATCA-compliant invoicing, unified payment gateway layer, custom domain mapping, merchant analytics, and automated shipping integrations (Aramex, SMSA, FedEx).",
+            "badges": [
+                "5,000+ Active Stores",
+                "Multi-tenant SaaS",
+                "ZATCA Compliant",
+                "Saudi Arabia"
+            ]
+        },
+        {
+            "name": "Al-Attaf",
+            "link": null,
+            "subtitle": "Home Services SaaS Platform",
+            "stack": "Nuxt 3 · Express · BullMQ · Firebase · WhatsApp API",
+            "description": "Multi-service booking SaaS with dynamic job scheduling, real-time provider matching, multi-channel notification engine (push, SMS, WhatsApp), and B2B provider management dashboard.",
+            "badges": [
+                "Real-Time Scheduling",
+                "Multi-Channel Notifications",
+                "B2B Dashboard"
+            ]
+        },
+        {
+            "name": "Citadel Medical Center",
+            "link": null,
+            "subtitle": "Appointment Booking System",
+            "stack": "Nuxt 3 · Express · MongoDB · MyFatoorah · Tabby",
+            "description": "Production medical booking platform with OTP authentication, doctor availability engine with Saudi timezone handling, online payment processing with installment options, loyalty rewards system, and patient management dashboard.",
+            "badges": [
+                "Production — KSA",
+                "Payment Integration",
+                "Loyalty System"
+            ]
+        }
+    ],
+    "education": {
+        "degree": "Bachelor of Computer Science & Information Technology",
+        "year": "2019 — 2023",
+        "school": "October High Institute for Computer Science & Information Technology · Cairo, Egypt"
+    },
+    "languages": [
+        { "lang": "Arabic", "level": "Native" },
+        { "lang": "English", "level": "Professional Working Proficiency" }
+    ]
+}

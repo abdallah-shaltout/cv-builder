@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Abdallah Shaltout — Senior Full-Stack Developer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                --ink: #111;
+                --body: #2a2a2a;
+                --mid: #555;
+                --mute: #888;
+                --rule: #d4d4d4;
+                --accent: #0a4d7a;
+                --page-w: 780px;
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+                color: var(--body);
+                background: #efefed;
+                font-size: 14px;
+                line-height: 1.5;
+            }
+
+            .page {
+                max-width: var(--page-w);
+                margin: 0 auto;
+                background: #fff;
+                padding: 56px 64px;
+            }
+
+            /* ── HEADER ─────────────────────────────────── */
+            .cv-header {
+                margin-bottom: 32px;
+                padding-bottom: 24px;
+                border-bottom: 2px solid var(--ink);
+            }
+
+            .cv-header h1 {
+                font-family: "Source Serif 4", Georgia, serif;
+                font-size: 2.4rem;
+                font-weight: 700;
+                color: var(--ink);
+                letter-spacing: -0.5px;
+                line-height: 1;
+                margin-bottom: 6px;
+            }
+
+            .cv-header .headline {
+                font-size: 0.9rem;
+                font-weight: 500;
+                color: var(--accent);
+                letter-spacing: 0.5px;
+                margin-bottom: 14px;
+            }
+
+            .contact-row {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px 20px;
+                font-size: 0.78rem;
+                color: var(--mid);
+            }
+
+            .contact-row a {
+                color: var(--mid);
+                text-decoration: none;
+            }
+            .contact-row a:hover {
+                color: var(--accent);
+                text-decoration: underline;
+            }
+            .contact-row span {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .c-icon {
+                width: 12px;
+                height: 12px;
+                opacity: 0.5;
+                flex-shrink: 0;
+            }
+
+            /* ── SECTION ─────────────────────────────────── */
+            .section {
+                margin-bottom: 28px;
+            }
+            .section:last-child {
+                margin-bottom: 0;
+            }
+
+            .section-title {
+                font-size: 0.68rem;
+                font-weight: 600;
+                letter-spacing: 2.5px;
+                text-transform: uppercase;
+                color: var(--mute);
+                border-bottom: 1px solid var(--rule);
+                padding-bottom: 6px;
+                margin-bottom: 16px;
+            }
+
+            /* ── SUMMARY ─────────────────────────────────── */
+            .summary {
+                font-size: 0.88rem;
+                line-height: 1.75;
+                color: var(--body);
+            }
+            .summary strong {
+                color: var(--ink);
+                font-weight: 600;
+            }
+
+            /* ── SKILLS TABLE ────────────────────────────── */
+            .skills-table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .skills-table tr {
+                vertical-align: top;
+            }
+            .skills-table td {
+                padding: 4px 0;
+                font-size: 0.82rem;
+                line-height: 1.6;
+                border: none;
+            }
+            .skills-table td:first-child {
+                width: 160px;
+                font-weight: 600;
+                color: var(--ink);
+                padding-right: 16px;
+                white-space: nowrap;
+            }
+
+            /* ── JOB ─────────────────────────────────────── */
+            .job {
+                margin-bottom: 22px;
+            }
+            .job:last-child {
+                margin-bottom: 0;
+            }
+
+            .job-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                margin-bottom: 1px;
+            }
+
+            .job-title {
+                font-size: 0.96rem;
+                font-weight: 700;
+                color: var(--ink);
+            }
+
+            .job-period {
+                font-family: "JetBrains Mono", "Courier New", monospace;
+                font-size: 0.72rem;
+                color: var(--mute);
+                white-space: nowrap;
+            }
+
+            .job-meta {
+                font-size: 0.8rem;
+                color: var(--mid);
+                margin-bottom: 10px;
+            }
+            .job-meta a {
+                color: var(--accent);
+                text-decoration: none;
+            }
+            .job-meta a:hover {
+                text-decoration: underline;
+            }
+
+            .job-bullets {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .job-bullets li {
+                font-size: 0.83rem;
+                color: var(--body);
+                line-height: 1.65;
+                padding-left: 16px;
+                position: relative;
+                margin-bottom: 5px;
+            }
+            .job-bullets li::before {
+                content: "▸";
+                position: absolute;
+                left: 0;
+                color: var(--accent);
+                font-size: 0.7rem;
+                top: 2px;
+            }
+            .job-bullets li strong {
+                color: var(--ink);
+                font-weight: 600;
+            }
+
+            /* ── PROJECTS ────────────────────────────────── */
+            .project-entry {
+                margin-bottom: 14px;
+            }
+            .project-entry:last-child {
+                margin-bottom: 0;
+            }
+
+            .project-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                margin-bottom: 3px;
+                gap: 12px;
+            }
+
+            .project-name {
+                font-size: 0.88rem;
+                font-weight: 700;
+                color: var(--ink);
+            }
+            .project-name a {
+                color: var(--accent);
+                text-decoration: none;
+            }
+            .project-name a:hover {
+                text-decoration: underline;
+            }
+
+            .project-stack {
+                font-family: "JetBrains Mono", monospace;
+                font-size: 0.67rem;
+                color: var(--mute);
+                text-align: right;
+                flex-shrink: 0;
+            }
+
+            .project-desc {
+                font-size: 0.81rem;
+                color: var(--body);
+                line-height: 1.6;
+            }
+
+            .project-metrics {
+                margin-top: 5px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+
+            .badge {
+                font-size: 0.68rem;
+                font-weight: 600;
+                border: 1px solid var(--rule);
+                border-radius: 3px;
+                padding: 1px 7px;
+                color: var(--mid);
+                letter-spacing: 0.3px;
+            }
+
+            /* ── EDUCATION ───────────────────────────────── */
+            .edu-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+            }
+            .edu-degree {
+                font-size: 0.88rem;
+                font-weight: 700;
+                color: var(--ink);
+            }
+            .edu-year {
+                font-family: "JetBrains Mono", monospace;
+                font-size: 0.72rem;
+                color: var(--mute);
+            }
+            .edu-school {
+                font-size: 0.8rem;
+                color: var(--mid);
+                margin-top: 2px;
+            }
+
+            @media print {
+                body {
+                    background: #fff;
+                    padding: 0;
+                }
+                .page {
+                    box-shadow: none;
+                    padding: 32px 44px;
+                }
+                a {
+                    color: inherit !important;
+                }
+            }
+
+            @media (max-width: 600px) {
+                .page {
+                    padding: 28px 20px;
+                }
+                .job-top,
+                .project-top,
+                .edu-row {
+                    flex-direction: column;
+                    gap: 2px;
+                }
+                .project-stack {
+                    text-align: left;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page">
+            <!-- HEADER -->
+            <header class="cv-header">
+                <h1>Abdallah Shaltout</h1>
+                <div class="headline">
+                    Senior Full-Stack Developer &nbsp;·&nbsp; MEVN Stack
+                    &nbsp;·&nbsp; 5+ Years Experience
+                </div>
+                <div class="contact-row">
+                    <span>
+                        <svg
+                            class="c-icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 0.72h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.29 6.29l.16-.93z"
+                            />
+                        </svg>
+                        <a href="tel:+201554673489">+20 155 467 3489</a>
+                    </span>
+                    <span>
+                        <svg
+                            class="c-icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path
+                                d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                            />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        Cairo, Egypt
+                    </span>
+                    <span>
+                        <svg
+                            class="c-icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <polyline points="8 21 12 17 16 21" />
+                        </svg>
+                        <a href="https://shaltoutdev.com" target="_blank"
+                            >shaltoutdev.com</a
+                        >
+                    </span>
+                    <span>
+                        <svg
+                            class="c-icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path
+                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                            />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                        <a
+                            href="https://linkedin.com/in/abdallah-shaltout"
+                            target="_blank"
+                            >linkedin.com/in/abdallah-shaltout</a
+                        >
+                    </span>
+                    <span>
+                        <svg
+                            class="c-icon"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                            />
+                        </svg>
+                        <a
+                            href="https://github.com/abdallah-shaltout"
+                            target="_blank"
+                            >github.com/abdallah-shaltout</a
+                        >
+                    </span>
+                </div>
+            </header>
+
+            <!-- PROFESSIONAL SUMMARY -->
+            <div class="section">
+                <div class="section-title">Professional Summary</div>
+                <p class="summary">
+                    Senior Full-Stack Developer with
+                    <strong>5+ years of experience</strong> architecting and
+                    delivering enterprise-grade web applications for the MENA
+                    market. Specialized in the
+                    <strong>MEVN stack</strong> (MongoDB, Express.js,
+                    Vue.js/Nuxt.js, Node.js) with deep expertise in
+                    <strong>multi-tenant SaaS architecture</strong>, payment
+                    gateway integrations, and ZATCA-compliant e-invoicing
+                    systems. Built and scaled production platforms serving
+                    <strong>5,000+ active merchants</strong> and
+                    <strong>2,000+ businesses</strong> across Egypt and Saudi
+                    Arabia. Experienced in leading development teams,
+                    establishing engineering standards, and owning projects from
+                    architecture through deployment. Proficient in Arabic RTL
+                    interfaces and culturally appropriate design for Middle
+                    Eastern markets.
+                </p>
+            </div>
+
+            <!-- TECHNICAL SKILLS -->
+            <div class="section">
+                <div class="section-title">Technical Skills</div>
+                <table
+                    class="skills-table"
+                    role="presentation"
+                    id="skills-table"
+                ></table>
+            </div>
+
+            <!-- PROFESSIONAL EXPERIENCE -->
+            <div class="section">
+                <div class="section-title">Professional Experience</div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <span class="job-title"
+                            >Senior Full-Stack Developer</span
+                        >
+                        <span class="job-period">May 2024 — Present</span>
+                    </div>
+                    <div class="job-meta">
+                        Zakham Company &nbsp;·&nbsp; Digital Marketing &amp;
+                        Development &nbsp;·&nbsp; Cairo, Egypt / Saudi Arabia
+                        &nbsp;·&nbsp;
+                        <a href="https://zakham-sa.com" target="_blank"
+                            >zakham-sa.com</a
+                        >
+                    </div>
+                    <ul class="job-bullets">
+                        <li>
+                            Lead engineer on <strong>tadberat.com</strong>, a
+                            production multi-vendor marketplace currently
+                            serving <strong>5,000+ active stores</strong> with
+                            hundreds of millions SAR in annual transaction
+                            volume.
+                        </li>
+                        <li>
+                            Designed and implemented a
+                            <strong>multi-tenant SaaS architecture</strong> with
+                            complete tenant isolation, dynamic wildcard
+                            subdomain routing via Traefik, and per-merchant
+                            custom domain SSL provisioning.
+                        </li>
+                        <li>
+                            Built a
+                            <strong>ZATCA Phase 2–compliant</strong> e-invoicing
+                            engine with automated XML generation, digital
+                            signing, and QR code stamping to meet Saudi tax
+                            authority requirements.
+                        </li>
+                        <li>
+                            Integrated
+                            <strong>5 payment gateways</strong> (MyFatoorah,
+                            Tabby, Tamara, STC Pay, Mada) into a unified
+                            checkout layer with webhook handling, refund
+                            processing, and financial reconciliation.
+                        </li>
+                        <li>
+                            Engineered Redis caching strategies and MongoDB
+                            aggregation pipeline optimizations that achieved a
+                            <strong>60% reduction in API response times</strong>
+                            under high-concurrency conditions.
+                        </li>
+                        <li>
+                            Architected Docker-based deployment pipelines on
+                            Coolify with zero-downtime deployments, centralized
+                            log management, and automated health monitoring.
+                        </li>
+                        <li>
+                            Led and mentored a team of
+                            <strong>5 developers</strong>; established
+                            TypeScript-first conventions, structured code review
+                            processes, and sprint planning workflows that
+                            improved delivery velocity.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <span class="job-title">Full-Stack Developer</span>
+                        <span class="job-period">Apr 2020 — Jul 2024</span>
+                    </div>
+                    <div class="job-meta">
+                        GCSDC &nbsp;·&nbsp; 4 Years 3 Months
+                    </div>
+                    <ul class="job-bullets">
+                        <li>
+                            Core developer of <strong>farook.app</strong>, a
+                            cloud-based POS and accounting platform serving
+                            <strong>2,000+ businesses</strong> across Saudi
+                            Arabia, maintaining a 99.9% uptime SLA.
+                        </li>
+                        <li>
+                            Architected an
+                            <strong>offline-first POS system</strong> with
+                            background sync, conflict resolution, and real-time
+                            inventory tracking across multiple branches and
+                            locations.
+                        </li>
+                        <li>
+                            Built a
+                            <strong>BullMQ-based distributed job queue</strong>
+                            for scheduled billing, automated financial report
+                            generation, and high-throughput background
+                            processing.
+                        </li>
+                        <li>
+                            Developed a multi-channel notification engine
+                            integrating
+                            <strong
+                                >Firebase FCM/APNS, WhatsApp Business API, and
+                                Twilio SMS</strong
+                            >
+                            for both transactional and marketing communications.
+                        </li>
+                        <li>
+                            Delivered
+                            <strong>ZATCA-compliant invoicing</strong> for the
+                            Saudi market, including VAT automation and certified
+                            digital invoice formats.
+                        </li>
+                        <li>
+                            Optimized MongoDB schemas, compound indexes, and
+                            aggregation queries, reducing average execution time
+                            by <strong>45% on core reporting modules</strong>.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-top">
+                        <span class="job-title"
+                            >Freelance Full-Stack Developer</span
+                        >
+                        <span class="job-period">2020 — 2024</span>
+                    </div>
+                    <div class="job-meta">
+                        Remote &nbsp;·&nbsp; Clients across Egypt, Saudi Arabia,
+                        and UAE
+                    </div>
+                    <ul class="job-bullets">
+                        <li>
+                            Delivered 10+ end-to-end projects including
+                            e-commerce stores, SaaS dashboards, corporate
+                            websites, and custom business tools for regional
+                            clients.
+                        </li>
+                        <li>
+                            Managed the complete project lifecycle
+                            independently: discovery, architecture, development,
+                            Docker deployment, and client handover.
+                        </li>
+                        <li>
+                            Notable deliveries include
+                            <strong>newmetalsteel.com</strong>,
+                            <strong>ps-adv.com</strong>, sysattaf.shop, and
+                            multiple private production systems.
+                        </li>
+                        <li>
+                            Maintained <strong>94 repositories</strong> (23
+                            public, 71 private) spanning production
+                            applications, internal tools, and reusable component
+                            libraries.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- KEY PROJECTS -->
+            <div class="section">
+                <div class="section-title">Key Projects</div>
+                <div id="projects-container"></div>
+            </div>
+
+            <!-- EDUCATION -->
+            <div class="section">
+                <div class="section-title">Education</div>
+                <div class="edu-row">
+                    <span class="edu-degree"
+                        >Bachelor of Computer Science &amp; Information
+                        Technology</span
+                    >
+                    <span class="edu-year">2019 — 2023</span>
+                </div>
+                <div class="edu-school">
+                    October High Institute for Computer Science &amp;
+                    Information Technology &nbsp;·&nbsp; Cairo, Egypt
+                </div>
+            </div>
+
+            <!-- LANGUAGES -->
+            <div class="section">
+                <div class="section-title">Languages</div>
+                <table
+                    class="skills-table"
+                    role="presentation"
+                    id="languages-table"
+                ></table>
+            </div>
+        </div>
+
+        <script>
+            // ── DATA (edit here for easier updates) ────────────────────────────────────
+
+            const skills = [
+                {
+                    category: "Frontend",
+                    items: "Vue.js 3, Nuxt.js 3/4, TypeScript, Pinia, TailwindCSS, PrimeVue, Three.js, Vite, Webpack",
+                },
+                {
+                    category: "Backend",
+                    items: "Node.js, Express.js, TypeScript, REST API Design, BullMQ, Socket.IO, JWT, OAuth 2.0",
+                },
+                {
+                    category: "Databases",
+                    items: "MongoDB, Mongoose, Redis, MySQL, PostgreSQL, Elasticsearch",
+                },
+                {
+                    category: "DevOps & Cloud",
+                    items: "Docker, Coolify, Traefik, AWS S3, Cloudinary, Firebase, CI/CD, GitHub Actions, Linux (Ubuntu)",
+                },
+                {
+                    category: "Payments & APIs",
+                    items: "MyFatoorah, Tabby, Tamara, STC Pay, Stripe, Mada, ZATCA e-Invoicing, WhatsApp Business API, Twilio, FCM/APNS",
+                },
+                {
+                    category: "Architecture",
+                    items: "Multi-tenant SaaS, Microservices, Event-Driven Architecture, CQRS, Offline-First, Dynamic Subdomain Routing",
+                },
+                {
+                    category: "Languages",
+                    items: "JavaScript (ES2022+), TypeScript, Python, SQL, Bash",
+                },
+                {
+                    category: "Tools & Methods",
+                    items: "Git, Postman, Jest, Bun, pnpm, ESLint, Prettier, Agile/Scrum, Code Review, Technical Mentorship",
+                },
+            ];
+
+            const projects = [
+                {
+                    name: "tadberat.com",
+                    link: "https://tadberat.com",
+                    subtitle: "Multi-Vendor Marketplace Platform",
+                    stack: "Nuxt 4 · Express · MongoDB · Redis · Docker · Traefik",
+                    description:
+                        "Enterprise multi-tenant marketplace with per-merchant storefronts, ZATCA-compliant invoicing, unified payment gateway layer, custom domain mapping, merchant analytics, and automated shipping integrations (Aramex, SMSA, FedEx).",
+                    badges: [
+                        "5,000+ Active Stores",
+                        "Multi-tenant SaaS",
+                        "ZATCA Compliant",
+                        "Saudi Arabia",
+                    ],
+                },
+                {
+                    name: "farook.app",
+                    link: "https://farook.app",
+                    subtitle: "Cloud POS & Accounting System",
+                    stack: "Nuxt 3 · Express · MongoDB · Redis · BullMQ · Socket.IO",
+                    description:
+                        "Full-featured cloud POS with offline-first architecture, real-time inventory management, multi-branch support, automated billing, ZATCA e-invoicing, and comprehensive financial reporting.",
+                    badges: [
+                        "2,000+ Businesses",
+                        "Offline-First Architecture",
+                        "99.9% Uptime",
+                        "Saudi Arabia",
+                    ],
+                },
+                {
+                    name: "Citadel Medical Center",
+                    link: null,
+                    subtitle: "Appointment Booking System",
+                    stack: "Nuxt 3 · Express · MongoDB · MyFatoorah · Tabby",
+                    description:
+                        "Production medical booking platform with OTP authentication, doctor availability engine with Saudi timezone handling, online payment processing with installment options, loyalty rewards system, and patient management dashboard.",
+                    badges: [
+                        "Production — KSA",
+                        "Payment Integration",
+                        "Loyalty System",
+                    ],
+                },
+                {
+                    name: "Al-Attaf",
+                    link: null,
+                    subtitle: "Home Services SaaS Platform",
+                    stack: "Nuxt 3 · Express · BullMQ · Firebase · WhatsApp API",
+                    description:
+                        "Multi-service booking SaaS with dynamic job scheduling, real-time provider matching, multi-channel notification engine (push, SMS, WhatsApp), and B2B provider management dashboard.",
+                    badges: [
+                        "Real-Time Scheduling",
+                        "Multi-Channel Notifications",
+                        "B2B Dashboard",
+                    ],
+                },
+            ];
+
+            const languages = [
+                { lang: "Arabic", level: "Native" },
+                { lang: "English", level: "Professional Working Proficiency" },
+            ];
+
+            // ── RENDER ─────────────────────────────────────────────────────────────────
+
+            function renderSkills() {
+                const table = document.getElementById("skills-table");
+                skills.forEach(({ category, items }) => {
+                    const tr = document.createElement("tr");
+                    tr.innerHTML = `<td>${category}</td><td>${items}</td>`;
+                    table.appendChild(tr);
+                });
+            }
+
+            function renderProjects() {
+                const container = document.getElementById("projects-container");
+                projects.forEach(
+                    ({ name, link, subtitle, stack, description, badges }) => {
+                        const namePart = link
+                            ? `<a href="${link}" target="_blank">${name}</a> — ${subtitle}`
+                            : `${name} — ${subtitle}`;
+                        const badgesHtml = badges
+                            .map((b) => `<span class="badge">${b}</span>`)
+                            .join("\n        ");
+                        const div = document.createElement("div");
+                        div.className = "project-entry";
+                        div.innerHTML = `
+        <div class="project-top">
+          <span class="project-name">${namePart}</span>
+          <span class="project-stack">${stack}</span>
+        </div>
+        <div class="project-desc">${description}</div>
+        <div class="project-metrics">${badgesHtml}</div>
+      `;
+                        container.appendChild(div);
+                    },
+                );
+            }
+
+            function renderLanguages() {
+                const table = document.getElementById("languages-table");
+                languages.forEach(({ lang, level }) => {
+                    const tr = document.createElement("tr");
+                    tr.innerHTML = `<td>${lang}</td><td>${level}</td>`;
+                    table.appendChild(tr);
+                });
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                renderSkills();
+                renderProjects();
+                renderLanguages();
+            });
+        </script>
+    </body>
+</html>
